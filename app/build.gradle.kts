@@ -11,7 +11,6 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "dev.oianmol.spotifyappremote"
         minSdk = 24
         targetSdk = 34
 
@@ -59,17 +58,12 @@ dependencies {
 }
 
 publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = "com.github.oianmol"
-            artifactId = "dev.oianmol.spotifyappremote"
-            version = "0.8.0"
-            pom {
-                description = "First release"
-            }
+    publications.create<MavenPublication>("maven") {
+        groupId = "com.github.oianmol"
+        artifactId = "dev.oianmol.spotifyappremote"
+        version = "0.8.0"
+        pom {
+            description = "First release"
         }
-    }
-    repositories {
-        mavenLocal()
     }
 }

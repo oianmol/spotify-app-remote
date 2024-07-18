@@ -61,9 +61,12 @@ publishing {
     publications.create<MavenPublication>("maven") {
         groupId = "com.github.oianmol"
         artifactId = "dev.oianmol.spotifyappremote"
-        version = "0.8.0"
+        version = "1.0.0"
         pom {
             description = "First release"
         }
+    }
+    repositories {
+        mavenLocal()
     }
 }
